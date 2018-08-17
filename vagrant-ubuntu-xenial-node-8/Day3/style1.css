@@ -1,0 +1,17 @@
+form li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+form ul {
+    padding-left: 0;
+}
+
+label {
+    display: block;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}

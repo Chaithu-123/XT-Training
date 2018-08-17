@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="width: 900px;">
+        <h2 align="center">json data</h2>
+        <h3>data</h3>
+
+        <div>
+            <input type="text" name="search" id="search" placeholder="search" class="form-control" />
+
+        </div>
+        <ul class="list-group-item" id="result"></ul>
+    </div>
+
+
+
+    <script>
+        let baseURL = 'https://api.themoviedb.org/3/';
+        let APIKEY = "0857f3bcecfb71367f56290556a3e85c";
+        let apiurl = baseURL + 'search/movie?api_key=' + APIKEY + '&query=';
+        $(document).ready(function() {
+            $('#search').keyup(function() {
+                $('#result').html('');
+                let searchField = $('#search').val();
+                let expression = new RegExp(searchField, "i");
+
+                $.ajax({
+                    url: apiurl + searchField,
+                    type: 'GET'
+                }).done(function(data) {
+
+                    $.each(data.results, function(key, value) {
+                        if (value.title.search(expression) != -1 || value.poster_path.search(
+                                expression) !=
+                            -1) {
+                            $('#result').append(
+                                `
+                                                    <li class="list-group-item">
+                                                    <img src="https://image.tmdb.org/t/p/w500` + value.poster_path + `" height="25" width="30" class="img-thumbnail" />
+                                                ` + value.title + `(` + value.release_date + `)
+                                                    </li>`
+                            );
+                        }
+                    })
+                });
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

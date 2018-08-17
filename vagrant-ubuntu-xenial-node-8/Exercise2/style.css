@@ -1,0 +1,47 @@
+.block {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+.quote {
+    float: left;
+    width: 50%;
+    background-color: cadetblue;
+}
+
+.side1 {
+    float: left;
+    width: 23%;
+    padding: 1%;
+    background-color: bisque;
+}
+
+.side2 {
+    float: right;
+    width: 23%;
+    padding: 1%;
+    background-color: blanchedalmond;
+}
+
+.quote,
+.side1,
+.side2 {
+    height: 600px;
+}
+
+.side1 li,
+.side2 li {
+    list-style: none;
+}
+
+.side1 ul,
+.side2 ul {
+    padding-left: 0px;
+}
+
+footer {
+    background-color: brown;
+    padding: 0%;
+}

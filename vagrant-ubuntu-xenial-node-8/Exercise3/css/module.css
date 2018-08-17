@@ -1,0 +1,31 @@
+ @media screen and (max-width: 600px) {
+     .two_col_sec {
+         flex-direction: column;
+         height: auto;
+     }
+     .spic {
+         width: 30%;
+     }
+     .navy {
+         width: 70%;
+     }
+     a.book-link1 {
+         position: inherit;
+     }
+     a.book-link2 {
+         position: inherit;
+     }
+     a.book-link3 {
+         position: inherit;
+     }
+ }
+ 
+ @media screen and (max-width:550px) {
+     header {
+         flex-direction: column;
+     }
+     .spic {
+         display: block;
+         margin: 0 auto;
+     }
+ }

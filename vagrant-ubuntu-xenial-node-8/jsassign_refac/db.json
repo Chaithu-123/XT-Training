@@ -1,0 +1,77 @@
+{
+    "MovieData": [{
+            "Name": "Animation",
+            "Desc": "Animation Movies",
+            "Movies": "[]",
+            "id": 1
+        },
+        {
+            "Name": "Action",
+            "Desc": "Action Movies",
+            "Movies": "[]",
+            "id": 2
+        },
+        {
+            "Name": "Horror",
+            "Desc": "Horror Movies",
+            "Movies": "[{\"adult\":false,\"backdrop_path\":\"/6P3c80EOm7BodndGBUAJHHsHKrp.jpg\",\"belongs_to_collection\":{\"id\":422834,\"name\":\"Ant-Man Collection\",\"poster_path\":\"/tdKbDECJQ3JmYaMubNaKFM1mgcY.jpg\",\"backdrop_path\":\"/2KjtWUBiksmN8LsUouaZnxocu5N.jpg\"},\"budget\":140000000,\"genres\":[{\"id\":28,\"name\":\"Action\"},{\"id\":12,\"name\":\"Adventure\"},{\"id\":14,\"name\":\"Fantasy\"},{\"id\":35,\"name\":\"Comedy\"},{\"id\":878,\"name\":\"Science Fiction\"}],\"homepage\":null,\"id\":363088,\"imdb_id\":\"tt5095030\",\"original_language\":\"en\",\"original_title\":\"Ant-Man and the Wasp\",\"overview\":\"As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions.\",\"popularity\":170.646,\"poster_path\":\"/rv1AWImgx386ULjcf62VYaW8zSt.jpg\",\"production_companies\":[{\"id\":420,\"logo_path\":\"/hUzeosd33nzE5MCNsZxCGEKTXaQ.png\",\"name\":\"Marvel Studios\",\"origin_country\":\"US\"}],\"production_countries\":[{\"iso_3166_1\":\"US\",\"name\":\"United States of America\"}],\"release_date\":\"2018-07-04\",\"revenue\":198330000,\"runtime\":118,\"spoken_languages\":[{\"iso_639_1\":\"en\",\"name\":\"English\"}],\"status\":\"Released\",\"tagline\":\"Real Heroes. Not Actual Size\",\"title\":\"Ant-Man and the Wasp\",\"video\":false,\"vote_average\":7.1,\"vote_count\":589}]",
+            "id": 3
+        },
+        {
+            "Name": "Comedy",
+            "Desc": "Comedy Movies",
+            "Movies": "[]",
+            "id": 4
+        }
+    ],
+    "ActionMovies": [{
+        "adult": "false",
+        "backdrop_path": "/6P3c80EOm7BodndGBUAJHHsHKrp.jpg",
+        "belongs_to_collection[id]": "422834",
+        "belongs_to_collection[name]": "Ant-Man Collection",
+        "belongs_to_collection[poster_path]": "/tdKbDECJQ3JmYaMubNaKFM1mgcY.jpg",
+        "belongs_to_collection[backdrop_path]": "/2KjtWUBiksmN8LsUouaZnxocu5N.jpg",
+        "budget": "140000000",
+        "genres[0][id]": "28",
+        "genres[0][name]": "Action",
+        "genres[1][id]": "12",
+        "genres[1][name]": "Adventure",
+        "genres[2][id]": "14",
+        "genres[2][name]": "Fantasy",
+        "genres[3][id]": "35",
+        "genres[3][name]": "Comedy",
+        "genres[4][id]": "878",
+        "genres[4][name]": "Science Fiction",
+        "homepage": "",
+        "id": "363088",
+        "imdb_id": "tt5095030",
+        "original_language": "en",
+        "original_title": "Ant-Man and the Wasp",
+        "overview": "As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions.",
+        "popularity": "175.939",
+        "poster_path": "/rv1AWImgx386ULjcf62VYaW8zSt.jpg",
+        "production_companies[0][id]": "420",
+        "production_companies[0][logo_path]": "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png",
+        "production_companies[0][name]": "Marvel Studios",
+        "production_companies[0][origin_country]": "US",
+        "production_countries[0][iso_3166_1]": "US",
+        "production_countries[0][name]": "United States of America",
+        "release_date": "2018-07-04",
+        "revenue": "198330000",
+        "runtime": "118",
+        "spoken_languages[0][iso_639_1]": "en",
+        "spoken_languages[0][name]": "English",
+        "status": "Released",
+        "tagline": "Real Heroes. Not Actual Size",
+        "title": "Ant-Man and the Wasp",
+        "video": "false",
+        "vote_average": "7.2",
+        "vote_count": "512"
+    }],
+    "ComedyMovies": [
+        {}
+    ],
+    "BioMovies": [
+        {}
+    ]
+}

@@ -1,0 +1,20 @@
+/* ul {
+    color: chartreuse;
+    background: brown;
+    text-decoration: cadetblue;
+}
+
+ol {
+    color: green;
+    background: darkblue;
+} */
+
+#tryingid {
+    color: red;
+    text-decoration: underline;
+}
+
+.tryingclass {
+    color: blue;
+    text-decoration: dashed;
+}

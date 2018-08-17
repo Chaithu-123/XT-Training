@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link rel="icon" href="img/db.png" type="image/png" sizes="16x16">
+    <title>The Movie Database (TMDb)</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="item">
+
+            <section class="left">
+                <h2 style="color: white">The Movie Db</h2>
+                <ul class="left_item" style="list-style: none">
+
+                    <li>
+                        <a href="#">
+                            <img src="img/db.png" alt="The Movie Database (TMDb)" width="81" height="72">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Discover</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Movies</a>
+
+                    </li>
+
+                    <li>
+                        <a href="#">People</a>
+
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <section class="left">
+                <h2 style="display: none">The Movie Db</h2>
+                <ul class="right_item" style="list-style: none">
+                    <li>
+                        <a href="#">Apps</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Leaderboard</a>
+                    </li>
+
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+
+            </section>
+        </nav>
+    </header>
+    <div class="container" style="width: 900px;position: relative;z-index: 9;">
+
+
+        <div>
+            <input type="text" name="search" id="search" placeholder="search" class="form-control" />
+
+        </div>
+        <ul class="list-group-item w-100" id="result" style=" position: absolute; padding: 0; "></ul>
+    </div>
+
+
+
+    <div id="whole_content">
+
+        <div class="container">
+            <div id="movie_list" class="row">
+
+            </div>
+        </div>
+        <h2>
+            Personal Collections!!!</h2>
+        <button type="button" id="percol" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Add Collection
+        </button>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                        <input type="text" id="myModalLabel" name="modaltitle" value="" />
+
+                    </div>
+                    <div class="modal-body">
+                        <input id="myModalbody" type="text" name="modalbody" value="" />
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="save" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container"></div>
+
+
+    </div>
+
+    <div id="movie_details" class="page_navigation">
+        <!-- <div class="custom_bg">
+            <div class="single_column">
+    
+    
+                <section class="images_inner">
+                    <div class="poster">
+                        <div class="image_content">
+    
+    
+    
+    
+                            <img class="poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg" srcset="https://image.tmdb.org/t/p/w300_and_h450_bestv2/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg 1x, https://image.tmdb.org/t/p/w600_and_h900_bestv2/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg 2x"
+                                alt="Jurassic World: Fallen Kingdom">
+    
+    
+    
+                        </div>
+    
+    
+    
+                    </div>
+    
+                    <div class="header_poster_wrapper">
+                        <section class="header_poster">
+                            <div class="title" dir="auto">
+    
+    
+    
+                                <span>
+                                    <a href="/movie/351286-jurassic-world-fallen-kingdom">
+                                        <h2 class="30">Jurassic World: Fallen Kingdom</h2>
+                                    </a>
+                                    <span class="release_date">(2018)</span>
+                                </span>
+    
+                            </div>
+                            <ul class="auto_actions">
+    
+                                <li class="chart">
+                                    <div class="c100 p34 center">
+                                        <span>34%</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                    <div class="text">User
+                                        <br>Score</div>
+                                </li>
+    
+    
+    
+                                <li class="tooltip use_tooltip menu" title="Add to list" data-role="tooltip">
+                                    hello </li>
+    
+    
+                                <li class="use_tooltip tooltip" title="Remove from your favorite list" data-role="tooltip">
+                                    hi
+                                </li>
+    
+    
+                                <li class="use_tooltip tooltip" title="Add to your watchlist" data-role="tooltip">
+                                    hello
+                                </li>
+    
+    
+                                <li class="tooltip use_tooltip rating" title="Rated 6.0" data-role="tooltip">
+                                    hi
+                                </li>
+    
+    
+    
+    
+    
+    
+    
+                            </ul>
+    
+                            <div class="header_info">
+                                <h3 dir="auto">Overview</h3>
+                                <div class="overview" dir="auto">
+    
+                                    <p>Several years after the demise of Jurassic World, a volcanic eruption threatens the remaining
+                                        dinosaurs on the island of Isla Nublar. Claire Dearing, the former park manager and founder
+                                        of the Dinosaur Protection Group, recruits Owen Grady to help prevent the extinction
+                                        of the dinosaurs once again.</p>
+    
+    
+                                </div>
+    
+                                <h3 class="featured" dir="auto" style="font-size:  2rem;">Featured Crew</h3>
+                                <ol class="people_no_image">
+    
+    
+                                    <li class="profile">
+                                        <p>
+                                            Derek Connolly
+                                        </p>
+                                        <p class="character">Writer</p>
+                                    </li>
+    
+                                    <li class="profile">
+                                        <p>
+                                            Colin Trevorrow
+                                        </p>
+                                        <p class="character">Writer</p>
+                                    </li>
+    
+                                    <li class="profile">
+                                        <p>
+                                            Juan Antonio Bayona
+                                        </p>
+                                        <p class="character">Director</p>
+                                    </li>
+    
+                                    <li class="profile">
+                                        <p>
+                                            Michael Crichton
+                                        </p>
+                                        <p class="character">Characters</p>
+                                    </li>
+    
+    
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+    
+                </section>
+    
+            </div>
+        </div> -->
+    </div>
+
+
+    <div class="modal fade" id="showCol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <form id="showmov" class="needs-validation" action="l" novalidate>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Collection Info</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12 col-sm-12 mb-1">
+                            <label for="col_mName">Name</label>
+                            <input id="col_mName" type="text" name="col_mName" value="" />
+                        </div>
+                        <div class="col-md-12 col-sm-12 mb-1">
+                            <label>Movie List</label>
+                            <ul id="col_movielist">
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </form>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="sav" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="foot page-footer font-small bg-dark text-white ">
+        <section class=" row ">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3  ">
+                <h6 class="text-uppercase mb-4 font-weight-bold text-white">Products</h6>
+                <p>
+                    <a href="#! ">Home</a>
+                </p>
+                <p>
+                    <a href="#! ">Find Theatres</a>
+                </p>
+                <p>
+                    <a href="#! ">Gallery</a>
+                </p>
+                <p>
+                    <a href="#! ">Events</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                <h6 class="text-uppercase mb-4 font-weight-bold ">Social links</h6>
+                <p>
+                    <a href="#! ">Facebook</a>
+                </p>
+                <p>
+                    <a href="#! ">Twitter</a>
+                </p>
+                <p>
+                    <a href="#! ">Google</a>
+                </p>
+                <p>
+                    <a href="#! ">Instagram</a>
+                </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 ">
+                <h6 class="text-uppercase mb-4 font-weight-bold ">Contact Us</h6>
+                <p>
+                    <i class="fa fa-home mr-3 "></i>Bangalore, Marathahalli 560037, Karnataka</p>
+                <p>
+                    <i class="fa fa-envelope mr-3 "></i> info@gmail.com</p>
+                <p>
+                    <i class="fa fa-phone mr-3 "></i> + 01 234 567 88</p>
+                <p>
+                    <i class="fa fa-print mr-3 "></i> + 01 234 567 89</p>
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <div class="row d-flex align-items-center ">
+
+
+            <div class="col-md-7 col-lg-8 ">
+
+
+                <p class="text-center text-md-left ">© 2018 Copyright:
+                    <a href="# ">
+                        <strong> Themoviedb.com</strong>
+                    </a>
+                </p>
+
+            </div>
+
+
+
+            <div class="  col-md-5 col-lg-4 ml-lg-0 ">
+
+
+                <div class="text-center text-md-right ">
+                    <ul class="so_link list-unstyled list-inline ">
+                        <li class="list-inline-item ">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 ">
+                                <i class="fab fa-facebook "></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 ">
+                                <i class="fab fa-twitter "></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 ">
+                                <i class="fab fa-google-plus "></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1 ">
+                                <i class="fab fa-linkedin "></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <!-- modal -->
+    <div class="modal fade" id="addMovieToCollectionModal" tabindex="-1" role="dialog" aria-labelledby="addMovieToCollectionModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-light">
+                    <h5 class="modal-title" id="addMovieToCollectionModalTitle">Add Movie To Collection</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addmovieform" class="needs-validation" action="l" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label>Name :</label>
+                                <label id="lbl_mName"></label>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mb-1">
+                                <label for="selcolletion">Select Collection:</label>
+                                <select class="form-control" id="selcolletion">
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a collection
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="btn-addmovie" type="button" class="btn btn-secondary" data-dismiss="modal">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/dist/bundle.js"></script>
+
+</body>
+
+</html>

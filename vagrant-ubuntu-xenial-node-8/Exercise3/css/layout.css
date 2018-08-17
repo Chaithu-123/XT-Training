@@ -1,0 +1,81 @@
+body {
+    background-color: #D3D3D3;
+    margin: 0px;
+}
+
+.hero_sec {
+    background-color: #666;
+    display: flex;
+    background-image: url("../img/heroimg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    line-height: 800px;
+    color: #fff;
+}
+
+article {
+    padding: 1rem;
+}
+
+.two_col_sec {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+}
+
+.left-half {
+    font-family: 'Open Sans', serif;
+    display: flex;
+    flex-basis: 50%;
+    background-image: url("../img/snooback.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+}
+
+.right-half {
+    display: flex;
+    flex-basis: 50%;
+    background-image: url(../img/billiardstab.jpg);
+    background-size: 100% 100%;
+    color: #FFFF00;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    color: #fff;
+    /* border-color: black; */
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.right-half div {
+    border: 1px solid #8282822b;
+    height: 50%;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.third_sec {
+    background-image: url(../img/thirdsec.jpg);
+    background-size: 100% 100%;
+    color: #c42020;
+    background-color: #D3D3D3;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    top: 0;
+    background-color: #604551;
+    width: 100%;
+    margin: 0px auto;
+    position: fixed;
+    justify-content: space-between;
+}

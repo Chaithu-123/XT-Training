@@ -1,0 +1,51 @@
+body {
+    background-color: lightslategray;
+}
+
+.title h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1.1em;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.images_inner {
+    display: flex;
+}
+
+.release_date {
+    opacity: 0.6;
+    font-size: 1.7em;
+}
+
+.auto_actions {
+    margin-bottom: 30px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.auto_actions .chart {
+    display: flex;
+}
+
+.header_poster {
+    padding-left: 40px;
+}
+
+.people_no_image {
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.people_no_image p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,28 @@
+{
+    "MovieData": [{
+            "title": "Action Movies",
+            "body": "This Collection consist of Action movies.",
+            "id": 1
+        },
+        {
+            "title": "Comedy Movies",
+            "body": "This Collection consist of Comedy movies.",
+            "id": 2
+        },
+        {
+            "title": "Bio-Movies",
+            "body": "This Collection consist of Bio movies.",
+            "id": 3
+        },
+
+    ],
+    "Action Movies": [
+        {}
+    ],
+    "Comedy Movies": [
+        {}
+    ],
+    "Bio-Movies": [
+        {}
+    ]
+}
